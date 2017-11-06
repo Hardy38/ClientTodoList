@@ -6,8 +6,8 @@ import * as passport from "passport";
 
 export function RegisterOAuth(app: Application, urlPrefix: string = "") {
     app.use(initOAuthGoogle({
-        GOOGLE_CLIENT_ID    : "150032486069-n9lbjqif9ucmu84bmc00jcm70hfiat0u.apps.googleusercontent.com",
-        GOOGLE_CLIENT_SECRET: "u64PkUyI8cdYufa3Fsi8Id_q",
+        GOOGLE_CLIENT_ID    : "620133065907-3p7fr49rc6f75pearn9ron17f3ac5h7q.apps.googleusercontent.com",
+        GOOGLE_CLIENT_SECRET: "9Jcu5-XWNdbDKzKoHx9mofxO",
         urlPrefix           : urlPrefix
     }));
     app.use(initOAuthFacebook({

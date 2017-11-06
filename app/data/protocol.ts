@@ -8,11 +8,11 @@ export type SERVER_UPDATE_LIST_NAME = { type: "SERVER_UPDATE_LIST_NAME", ListID:
 export type SERVER_UPDATE_LIST_DATA = { type: "SERVER_UPDATE_LIST_DATA", ListID: ListID, data: Object };
 
 export type SERVER_CREATE_ITEM = {  type: "SERVER_CREATE_ITEM", ListID: ListID,
-                                    label: string, checked: boolean, data: Object, clientItemId: ItemID };
+                                    label: string, checked: boolean, data: dataForItem, clientItemId: ItemID };
 export type SERVER_DELETE_ITEM = { type: "SERVER_DELETE_ITEM", ListID: ListID, ItemID: ItemID };
 export type SERVER_UPDATE_ITEM_CHECK = { type: "SERVER_UPDATE_ITEM_CHECK", ListID: ListID, ItemID: ItemID, check: boolean };
 export type SERVER_UPDATE_ITEM_LABEL = { type: "SERVER_UPDATE_ITEM_LABEL", ListID: ListID, ItemID: ItemID, label: string };
-export type SERVER_UPDATE_ITEM_DATA = { type: "SERVER_UPDATE_ITEM_DATA", ListID: ListID, ItemID: ItemID, data: Object };
+export type SERVER_UPDATE_ITEM_DATA = { type: "SERVER_UPDATE_ITEM_DATA", ListID: ListID, ItemID: ItemID, data: dataForItem };
 
 export type TODOLISTS_NEW_STATE = {
     type: "TODOLISTS_NEW_STATE",
@@ -60,4 +60,8 @@ export type TodoListWithItems = {
     items: ItemJSON[],
     clock: number,
     data: Object // Possible extensions
+};
+
+export type dataForItem = {
+    itemDate: Date;
 };
